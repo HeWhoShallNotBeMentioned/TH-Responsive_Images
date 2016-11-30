@@ -13,16 +13,23 @@
 
     <div class="wrapper">
 
-      <img
-        sizes="50vw,
-              (min-width: 1024px) 512px"
-        srcset="img/banner-large.jpg 2048w,
-                img/banner-medium.jpg 1400w,
-                img/banner-small.jpg 800w"
-        src="img/banner-medium.jpg"
-        alt="Photograph of Nick Pettit in front of trees"
-        class="banner-image"
-      />
+      <picture>
+        <source
+          media='(orientation: landscape)'
+          srcset="img/banner-large.jpg 2048w,
+          img/banner-medium.jpg 1400w,
+          img/banner-small.jpg 800w"
+          />
+          <source
+            srcset="img/banner-square-large.jpg 1000w,
+            img/banner-square-medium.jpg 800w"
+            />
+        <img
+          src ="img/banner-medium.jpg"
+          alt="Photograph of Nick Pettit in front of trees"
+          class="banner-image"
+        />
+      </picture>
 
       <div class="content-block">
 
